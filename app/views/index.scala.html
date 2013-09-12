@@ -1,0 +1,62 @@
+@main {
+    <script>
+        require(["dojo/parser", "dijit/MenuBar", "dijit/MenuBarItem", "dijit/PopupMenuBarItem", "dijit/DropDownMenu",
+        "dijit/MenuItem", "dijit/layout/BorderContainer", "dijit/layout/AccordionContainer", "dijit/layout/ContentPane",
+        "dijit/layout/TabContainer"]);
+    </script>
+
+    <div id="main" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="liveSplitters:false, design:'sidebar'">
+
+        <div id="header" data-dojo-type="dijit/MenuBar" data-dojo-props="region:'top'">
+            <div data-dojo-type="dijit/PopupMenuBarItem">
+                <span>Prueba</span>
+                <div data-dojo-type="dijit/DropDownMenu" id="fileMenu">
+                    <div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function(){alert('file 1');}">File #1</div>
+                    <div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function(){alert('file 2');}">File #2</div>
+                </div>
+            </div>
+            <div data-dojo-type="dijit/PopupMenuBarItem">
+                <span>Edit</span>
+                <div data-dojo-type="dijit/DropDownMenu" id="editMenu">
+                    <div data-dojo-type="dijit/MenuItem" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCut',
+                                        onClick:function(){alert('cut!')}">Cut</div>
+                    <div data-dojo-type="dijit/MenuItem" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCopy',
+                                        onClick:function(){alert('copy!')}">Copy</div>
+                    <div data-dojo-type="dijit/MenuItem" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconPaste',
+                                        onClick:function(){alert('paste!')}">Paste</div>
+                </div>
+            </div>
+            <div data-dojo-type="dijit/MenuBarItem">
+                Save
+            </div>
+
+        </div>
+
+        <div data-dojo-type="dijit/layout/AccordionContainer" data-dojo-props="region:'leading', splitter:true, minSize:20"
+        style="width: 300px;" id="leftAccordion">
+
+            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props='title:"Pruebas"'>
+
+            </div>
+
+            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props='title:"Usuarios"'>
+                    <!-- tree widget -->
+
+            </div>
+
+        </div><!-- end AccordionContainer -->
+
+        <!-- top tabs (marked as "center" to take up the main part of the BorderContainer) -->
+        <div data-dojo-type="dijit/layout/TabContainer" data-dojo-props="region:'center', tabStrip:true" id="topTabs">
+
+            <div id="basicFormTab" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'Basic Form Widgets', style:'padding:10px;display:none;'">
+
+                <h2>Buttons</h2>
+
+            </div>
+
+        </div>
+
+    </div>
+
+}

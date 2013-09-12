@@ -1,0 +1,17 @@
+@(content: Html)
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Gabug</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+            <link rel="stylesheet" href="@routes.Assets.at("javascripts/dojo/dijit/themes/claro/document.css")" />
+            <link rel="stylesheet" href="@routes.Assets.at("javascripts/dojo/dijit/themes/claro/claro.css")" />
+            <link rel="stylesheet" href="@routes.Assets.at("javascripts/dojo/dojox/grid/resources/claroGrid.css")" />
+            <script src="@routes.Assets.at("javascripts/dojo/dojo/dojo.js")" data-dojo-config="isDebug: true, async: true, parseOnLoad: true"></script>
+    </head>
+    <body class="claro">
+        @content
+    </body>
+</html>
